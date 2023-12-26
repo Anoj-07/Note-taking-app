@@ -4,7 +4,7 @@ import Delete from "../../Asset/Delete.png";
 
 function Note(props) {
   
-  let timer=500,
+  let timer=90,
   timeout;
 
   //Time and Date
@@ -59,7 +59,7 @@ function Note(props) {
 
   return (
     <div className="note" style={{ background: props.note.color }}>
-      <textarea className="note_text" placeholder={props.note.text}
+      <textarea className="note_text" value={props.note.text}
       onChange={(event)=>
         updateText(event.target.value, props.note.id)}
         />
